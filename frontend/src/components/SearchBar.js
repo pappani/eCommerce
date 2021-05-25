@@ -20,16 +20,16 @@ const SearchBar = ({ history }) => {
         <>
         <Form onSubmit={submitHandler} className='flex-fill' inline>
             <Row>
-            <Col xs={8}><Form.Control type='text' name='search' onChange={(e) => setKeyword(e.target.value)} placeholder='Cerca prodotti' ></Form.Control></Col>
-            <Col><Button type='submit' variant='alert' className='p-2'><i className='fas fa-search' ></i></Button></Col>
+            <Col xs={8}><Form.Control type='text' name='search' onChange={(e) => setKeyword(e.target.value)} style={{borderRadius: 25, height: 30, marginLeft: 10, marginTop: 5, fontSize: 15}} placeholder='Cerca prodotti' ></Form.Control></Col>
+            <Col><Button type='submit' variant='alert' className='p-2' style={{marginLeft: -12, marginRight: 10}}><i className='fas fa-search' ></i></Button></Col>
             </Row>
         </Form>
         
-        <Button type='submit' variant='primary' onClick={smartphones} className='p-2'>Smartphone</Button>&nbsp;
-        <Button type='submit' variant='primary' onClick={computers} className='p-2'>Computer</Button>&nbsp;
-        <Button type='submit' variant='primary' onClick={consoles} className='p-2'>Console</Button>&nbsp;
-        <Button type='submit' variant='primary' onClick={accessories} className='p-2'>Accessori</Button>&nbsp;
-        <Button type='submit' variant='primary' onClick={smarthome} className='p-2'>Domotica</Button>
+        <Button type='submit' variant='secondary' onClick={smartphones} className='p-1'>Smartphone</Button>&nbsp;&nbsp;
+        <Button type='submit' variant='secondary' onClick={computers} className='p-1'>Computer</Button>&nbsp;&nbsp;
+        <Button type='submit' variant='secondary' onClick={consoles} className='p-1'>Console</Button>&nbsp;&nbsp;
+        <Button type='submit' variant='secondary' onClick={accessories} className='p-1'>Accessori</Button>&nbsp;&nbsp;
+        <Button type='submit' variant='secondary' onClick={smarthome} className='p-1'>Domotica</Button>&nbsp;
         </>
     )
 }
