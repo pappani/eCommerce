@@ -108,7 +108,7 @@ const ProductScreen = ({ history, match }) => {
             <Row>
                 <Col md={6}>
                     <h2>Recensioni</h2>
-                    {product.reviews.length === 0 && <p>Nessuna recensione</p>}
+                    {product.reviews.length === 0 && 'Nessuna recensione'}
                     <ListGroup variant='flush'>
                         {product.reviews.map((review) => (
                             <ListGroup.Item key={review._id}>
@@ -122,7 +122,7 @@ const ProductScreen = ({ history, match }) => {
                         <h2>Scrivi una recensione</h2>
                         {errorProductReview && <h2>Errore {errorProductReview}</h2>}
                         {userInfo ? (<Form onSubmit={submit}><Form.Group controlId='rating'><Form.Label>Voto</Form.Label>
-                        <Form.Control as='select' value={rating} onChange={(e) => setRating(e.target.value)}>
+                        <Form.Control as='select' className="sm" value={rating} onChange={(e) => setRating(e.target.value)}>
                             <option value=''> </option>
                             <option value='1'>1</option>
                             <option value='2'>2</option>
@@ -131,7 +131,7 @@ const ProductScreen = ({ history, match }) => {
                             <option value='5'>5</option>
                         </Form.Control></Form.Group>
                         <Form.Group controlId='comment'><Form.Label>Commento</Form.Label>
-                        <Form.Control as='textarea' row='3' value={comment} onChange={(e) => setComment(e.target.value)}></Form.Control></Form.Group>
+                        <Form.Control as='textarea' row='3' value={comment} onChange={(e) => setComment(e.target.value)}></Form.Control></Form.Group><p></p>
                         <Button type='submit' variant='primary'>Invia</Button></Form>
                         ) : <p><Link to='/login'>Accedi</Link> per scrivere una recensione</p>}
                     </ListGroup.Item>

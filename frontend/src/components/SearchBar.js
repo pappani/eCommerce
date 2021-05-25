@@ -2,7 +2,7 @@
 // Progetto eCommerce per corso Tecnologie Internet
 
 import React, { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Row, Col } from 'react-bootstrap'
 
 const SearchBar = ({ history }) => {
     const [keyword, setKeyword] = useState('');
@@ -18,15 +18,17 @@ const SearchBar = ({ history }) => {
 
     return (
         <>
-        <Form onSubmit={submitHandler} inline>
-            <Form.Control type='text' name='search' onChange={(e) => setKeyword(e.target.value)} placeholder='Cerca prodotti' className='mr-sm-2 ml-sm-5' ></Form.Control>
-        <Button type='submit' variant='primary' className='p-2'><i className='fas fa-search'></i></Button>   
+        <Form onSubmit={submitHandler} className='flex-fill' inline>
+            <Row>
+            <Col xs={8}><Form.Control type='text' name='search' onChange={(e) => setKeyword(e.target.value)} placeholder='Cerca prodotti' ></Form.Control></Col>
+            <Col><Button type='submit' variant='primary' className='p-2'><i className='fas fa-search' ></i></Button></Col>
+            </Row>
         </Form>
-        &nbsp;&nbsp;&nbsp;
-        <Button type='submit' variant='primary' onClick={smartphones} className='p-2'>Smartphone</Button>
-        <Button type='submit' variant='primary' onClick={computers} className='p-2'>Computer</Button>
-        <Button type='submit' variant='primary' onClick={consoles} className='p-2'>Console</Button>
-        <Button type='submit' variant='primary' onClick={accessories} className='p-2'>Accessori</Button>
+        
+        <Button type='submit' variant='primary' onClick={smartphones} className='p-2'>Smartphone</Button>&nbsp;
+        <Button type='submit' variant='primary' onClick={computers} className='p-2'>Computer</Button>&nbsp;
+        <Button type='submit' variant='primary' onClick={consoles} className='p-2'>Console</Button>&nbsp;
+        <Button type='submit' variant='primary' onClick={accessories} className='p-2'>Accessori</Button>&nbsp;
         <Button type='submit' variant='primary' onClick={smarthome} className='p-2'>Domotica</Button>
         </>
     )

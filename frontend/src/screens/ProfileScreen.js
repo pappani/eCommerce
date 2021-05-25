@@ -58,19 +58,19 @@ const ProfileScreen = ({ location, history }) => {
                     <Form.Group controlId='name'>
                         <Form.Label>Nome</Form.Label>
                         <Form.Control type="name" placeholder="Inserisci nome" value={name} onChange={(e) => setName(e.target.value)}></Form.Control>
-                    </Form.Group>
+                    </Form.Group><p></p>
                     <Form.Group controlId='email'>
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="email" placeholder="Inserisci email" value={email} onChange={(e) => setEmail(e.target.value)}></Form.Control>
-                    </Form.Group>
+                    </Form.Group><p></p>
                     <Form.Group controlId='password'>
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Inserisci password" value={password} onChange={(e) => setPassword(e.target.value)}></Form.Control>
-                    </Form.Group>
+                    </Form.Group><p></p>
                     <Form.Group controlId='confirmPassword'>
                         <Form.Label>Conferma Password</Form.Label>
                         <Form.Control type="password" placeholder="Inserisci di nuovo la password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}></Form.Control>
-                    </Form.Group>
+                    </Form.Group><p></p>
                     <Button type="submit" variant="primary">
                         Aggiorna profilo utente
                     </Button>

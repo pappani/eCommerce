@@ -78,34 +78,34 @@ const ProductEditScreen = ({ match, history }) => {
                 <Form.Group controlId='name'>
                     <Form.Label>Nome</Form.Label>
                     <Form.Control type="name" placeholder="Inserisci nome" value={name} onChange={(e) => setName(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='price'>
                     <Form.Label>Prezzo</Form.Label>
                     <Form.Control type="number" placeholder="Inserisci prezzo" value={price} onChange={(e) => setPrice(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='image'>
                     <Form.Label>Immagine</Form.Label>
                     <Form.Control type="text" placeholder="Inserisci immagine" value={image} onChange={(e) => setImage(e.target.value)}></Form.Control>
                     <Form.File id='image-file' label='Scegli immagine' custom onChange={uploadFileHandler}>
                         {uploading && <h2>Caricamento...</h2>}
                     </Form.File>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='brand'>
                     <Form.Label>Marca</Form.Label>
                     <Form.Control type="text" placeholder="Inserisci marca" value={brand} onChange={(e) => setBrand(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='countInStock'>
                     <Form.Label>Pezzi disponibili</Form.Label>
                     <Form.Control type="number" placeholder="Inserisci pezzi disponibili" value={countInStock} onChange={(e) => setCountInStock(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='category'>
                     <Form.Label>Categoria</Form.Label>
                     <Form.Control type="text" placeholder="Inserisci categoria" value={category} onChange={(e) => setCategory(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Form.Group controlId='description'>
                     <Form.Label>Descrizione</Form.Label>
                     <Form.Control type="text" placeholder="Inserisci descrizione" value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Button type="submit" variant="primary">
                     Conferma
                 </Button>

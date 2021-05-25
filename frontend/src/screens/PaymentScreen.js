@@ -36,7 +36,7 @@ const PaymentScreen = ({ history }) => {
                     <Form.Check type='radio' label='Carta di Credito' id='creditCard' name='paymentMethod' value='Carta di credito' checked onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check>
                     <Form.Check type='radio' label='Contrassegno' id='cash' name='paymentMethod' value='Contrassegno' onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check>
                 </Col>
-                </Form.Group>
+                </Form.Group><p></p>
                 <Button type='submit' variant='primary'>Continua</Button>
             </Form>
         </FormContainer>
