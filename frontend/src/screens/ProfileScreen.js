@@ -49,7 +49,7 @@ const ProfileScreen = ({ location, history }) => {
     return (
         <Row>
             <Col md={3}>
-                <h1>Profilo utente</h1>
+                <h2>Profilo utente</h2>
                 {loading && <h2></h2>}
                 {message && <h2>{message}</h2>}
                 {success && <h2>Profilo aggiornato</h2>}
@@ -78,7 +78,7 @@ const ProfileScreen = ({ location, history }) => {
             </Col>
 
             <Col md={9}>
-                <h1>Ordini</h1>
+                <h2>Ordini</h2>
                 {loadingOrders ? <h2></h2> : errorOrders ? <h2>Errore {error}</h2> : (
                     <Table striped bordered hover responsive className='table-sm'>
                         <thead>

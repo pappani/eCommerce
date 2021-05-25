@@ -70,7 +70,7 @@ const ProductEditScreen = ({ match, history }) => {
         <>
             <Link to='/admin/productlist' className='btn btn-light my-3'>Torna indietro</Link>
             <FormContainer>
-            <h1>Modifica prodotto</h1>
+            <h2>Modifica prodotto</h2>
             {loadingUpdate && <></>}
             {errorUpdate && <h2>Errore {errorUpdate}</h2>}
             {loading ? <h2></h2> : error ? <h2>Errore</h2> : (

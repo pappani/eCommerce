@@ -30,7 +30,7 @@ const LoginScreen = ({ location, history }) => {
 
     return (
         <FormContainer>
-            <h1>Accedi</h1>
+            <h2>Accedi</h2>
             {error && <h2>Errore</h2>}
             {loading && <h2></h2>}
             <Form onSubmit={submit}>

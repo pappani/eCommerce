@@ -26,7 +26,7 @@ const PaymentScreen = ({ history }) => {
         <>
         <CheckoutSteps step1 step2 step3 />
         <FormContainer>
-            <h1>Pagamento</h1>
+            <h2>Pagamento</h2>
             <Form onSubmit={ submit }>
                 <Form.Group>
                     <Form.Label as='legend'>

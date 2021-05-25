@@ -25,7 +25,7 @@ const OrderListScreen = ({ history }) => {
 
     return (
         <>
-            <h1>Ordini</h1>
+            <h2>Ordini</h2>
             {loading ? <></> : error ? <h2>Errore</h2> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>

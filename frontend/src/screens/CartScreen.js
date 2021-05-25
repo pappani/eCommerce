@@ -28,8 +28,8 @@ const CartScreen = ({ match, location, history }) => {
     return (
         <Row>
             <Col md={8}>
-                <h1>Carrello</h1>
-                {cartItems.length === 0 ? <h1>Il tuo carrello è vuoto <Link to='/'><br></br>Torna indietro</Link></h1> : (<ListGroup variant='flush'>
+                <h2>Carrello</h2>
+                {cartItems.length === 0 ? <>Il tuo carrello è vuoto <Link to='/'><br></br>Torna indietro</Link></> : (<ListGroup variant='flush'>
                     {cartItems.map(item => (
                         <ListGroup.Item key={item.product}>
                             <Row>

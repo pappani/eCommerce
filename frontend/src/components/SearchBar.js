@@ -21,7 +21,7 @@ const SearchBar = ({ history }) => {
         <Form onSubmit={submitHandler} className='flex-fill' inline>
             <Row>
             <Col xs={8}><Form.Control type='text' name='search' onChange={(e) => setKeyword(e.target.value)} placeholder='Cerca prodotti' ></Form.Control></Col>
-            <Col><Button type='submit' variant='primary' className='p-2'><i className='fas fa-search' ></i></Button></Col>
+            <Col><Button type='submit' variant='alert' className='p-2'><i className='fas fa-search' ></i></Button></Col>
             </Row>
         </Form>
         

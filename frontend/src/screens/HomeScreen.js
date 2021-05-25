@@ -21,7 +21,7 @@ const HomeScreen = ({ match }) => {
         <>
             {error && <h2>Errore</h2>}
             {loading && <></>}
-            <h1>Prodotti</h1>
+            <h2>Prodotti</h2>
             <Row>
                 { products.map((product) => (
                     <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

@@ -38,7 +38,7 @@ const OrderScreen = ({ match, history }) => {
     }
 
     return loading ? <></> : error ? <h2>Errore {error}</h2> : <>
-    <h1>Ordine N. {order._id}</h1>
+    <h2>Ordine N. {order._id}</h2>
     <Row>
                 <Col md={8}>
                     <ListGroup variant='flush'>

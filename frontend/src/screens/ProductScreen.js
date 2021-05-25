@@ -39,7 +39,7 @@ const ProductScreen = ({ history, match }) => {
             {loading ? (
             <></>
             ) : error ? (
-            <h1>Errore</h1>
+            <h2>Errore</h2>
             ) : (
             <>
             <Row>
@@ -49,7 +49,7 @@ const ProductScreen = ({ history, match }) => {
                 <Col md={3}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h3>{product.name}</h3>
+                            <h2>{product.name}</h2>
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <Rating value={product.avgRating} text={`${product.numReviews} recensioni`} />
