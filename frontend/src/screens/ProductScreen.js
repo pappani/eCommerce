@@ -133,7 +133,7 @@ const ProductScreen = ({ history, match }) => {
                         <Form.Group controlId='comment'><Form.Label>Commento</Form.Label>
                         <Form.Control as='textarea' row='3' value={comment} onChange={(e) => setComment(e.target.value)}></Form.Control></Form.Group><p></p>
                         <Button type='submit' variant='primary'>Invia</Button></Form>
-                        ) : <p><Link to='/login'>Accedi</Link> per scrivere una recensione</p>}
+                        ) : <><Link to='/login'>Accedi</Link> per scrivere una recensione</>}
                     </ListGroup.Item>
                     </ListGroup>
                 </Col>
