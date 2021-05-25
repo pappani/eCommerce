@@ -114,8 +114,8 @@ const ProductScreen = ({ history, match }) => {
                             <ListGroup.Item key={review._id}>
                                 <strong>{review.name}</strong>
                                 <Rating value={review.rating} />
-                                <p>{review.createdAt.substring(0, 10)}</p>
-                                <p>{review.comment}</p>
+                                {review.createdAt.substring(0, 10)}<p></p>
+                                {review.comment}
                             </ListGroup.Item>
                         ))}
                     <ListGroup.Item>
