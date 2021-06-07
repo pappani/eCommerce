@@ -29,7 +29,13 @@ const OrderScreen = ({ match, history }) => {
     if (!loading) { order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0); }
     const pay = () => {
         dispatch(payOrder(orderId));
-        window.alert("Pagato!");
+        window.prompt('Inserisci numero carta di credito: ');
+        window.alert('Ordine pagato con successo.');
+        window.location.reload();
+    }
+    const signPaid = () => {
+        dispatch(payOrder(orderId));
+        window.alert('Ordine pagato con successo.');
         window.location.reload();
     }
     const deliver = () => {
@@ -121,7 +127,7 @@ const OrderScreen = ({ match, history }) => {
                             )}
                             {(order.paymentMethod === 'Contrassegno' && !order.isPaid && !order.isDelivered) && (
                                 <ListGroup.Item>
-                                {<Button className="btn-block" onClick={pay}>Segna pagato</Button>}
+                                {<Button className="btn-block" onClick={signPaid}>Segna pagato</Button>}
                             </ListGroup.Item>
                             )}
                             {(order.paymentMethod === 'Contrassegno' && order.isPaid && !order.isDelivered) && (
